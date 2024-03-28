@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+ --index-color:#bdb8c9;                                          
+  --color-primario:#fbfbf9;
+  --titulo-logo:40px;
+  --titulo-logo-m:50px;
+  --li-guia-blamco: 1px solid white;
+  --font-size: 16px;
+  --main-color: #8b75a8 !important;
+  --second-color: #222;
+  --main-modal-color:#8b75a8;
+  --second-modal-color:rgba(34,34,34,0.85);
+  --container-width:1200px;
+}
+/* reseteando valores  */
+html{
+  scroll-behavior: smooth;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bona Nova", serif;
+
+}
+.bona-nova-regular {
+  font-family: "Bona Nova", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bona-nova-bold {
+  font-family: "Bona Nova", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bona-nova-regular-italic {
+  font-family: "Bona Nova", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+/* estilos base  */
+body{
+    /* background-color: var(--index-color);     */
+    background: -webkit-linear-gradient(191deg, #191a1a,#271032,#130a24);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(191deg, #191a1a,#271032,#130a24);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                                                               
+}
+.sectionperso{
+  padding: 2rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: center;
+  
+}
+.panelperso{
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--second-modal-color);
+  transition: transform 0.3s ease;
+  transform: translate(0, -100%);
+}
+
+.panelperso.is-active{
+  transform: translate(0,0);
+}
+.panel-btnPerso{
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.menuPerso{
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menuPerso a{
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: whitesmoke ;
+  transition: all 0.3s ease;
+}
+
+.menuPerso a:hover{
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before{
+  background-color: white !important;
+}
+.hamburger{
+  background-color: rgb(123, 108, 123) !important;
+}
+.hamburger-inner{
+  margin-top: 3px !important;
+  margin-left: -2.5px;
+}
+.col-12> .form-floating > .form-control, .form-floating > .form-select{
+  height: calc(3.5rem + 140px);
+}
+
+.btn-checkPerso:active + .btn-outline-primaryPerso, .btn-check:checked + .btn-outline-primaryPerso, .btn-outline-primaryPerso.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primaryPerso:active{
+  background-color: transparent;  
+  border-bottom: 1px solid #ffff !important;
+}
+.esconder{
+  display: block;
+}
+@media screen and (max-width:991px) {
+  .sectionperso{
+  background-image: url("../img/main/NagualMaya.png");
+  background-size: 97%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  }
+}
+@media screen and (min-width:992px) {
+  .esconder{
+    display: none !important;
+  }
+   .fondo{
+  background-image: url("../img/main/NagualMaya.png");
+  background-size: 57%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  }
+}
