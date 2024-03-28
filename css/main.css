@@ -47,9 +47,16 @@ body{
     /* background-color: var(--index-color);     */
     background: -webkit-linear-gradient(191deg, #191a1a,#271032,#130a24);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(191deg, #191a1a,#271032,#130a24);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                                                               
 }
+.menuEscritoio{
+  position: sticky;
+  top: 0;  
+  background-color: rgba(123, 108, 123, 0.11) !important;  
+  z-index: 3;
+}
+
 .sectionperso{
   padding: 2rem;
-  padding-top: 4rem;
+  padding-top: 3.6rem;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -126,6 +133,62 @@ body{
 .col-12> .form-floating > .form-control, .form-floating > .form-select{
   height: calc(3.5rem + 140px);
 }
+.botonEnviar{
+  width: 100%;
+  position: relative;
+  padding: 20px 50px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 5px;
+  text-indent: 10px;
+  z-index: 2;
+}
+
+.botonGluGlu{
+  /* border: 3px solid #17a2ff; */
+  border: none;  
+  overflow: hidden;
+}
+
+.botonGluGlu::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(7, 7, 7);
+  z-index: -2;
+}
+
+.botonGluGlu::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  left: 0;
+  bottom: -150%;
+  border-radius: 30%;
+  /* background-color: #151E3F; */
+  background-color: #130a24;  
+  z-index: -1;
+}
+
+.botonGluGlu:hover::before{
+  animation: botonGluGlu 0.9s ease-out both;
+}
+
+
+@keyframes botonGluGlu {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      bottom: 100px;
+      transform: rotate(360deg);
+      
+  }
+}
 
 .btn-checkPerso:active + .btn-outline-primaryPerso, .btn-check:checked + .btn-outline-primaryPerso, .btn-outline-primaryPerso.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primaryPerso:active{
   background-color: transparent;  
@@ -134,8 +197,9 @@ body{
 .esconder{
   display: block;
 }
-@media screen and (max-width:991px) {
-  .sectionperso{
+
+@media screen and (max-width:576px) {
+  .fondo{
   background-image: url("../img/main/NagualMaya.png");
   background-size: 97%;
   background-repeat: no-repeat;
@@ -143,15 +207,68 @@ body{
   background-attachment: fixed;
   }
 }
+@media screen and (min-width:768px) {
+   
+  .botonGluGlu::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    left: 0;
+    bottom: -150%;
+    border-radius: 23%;
+    /* background-color: #151E3F; */
+    background-color: #130a24;    
+    z-index: -1;
+  }
+}
+
 @media screen and (min-width:992px) {
   .esconder{
     display: none !important;
+  }  
+  .botonEnviar{
+    width: 50%;
   }
-   .fondo{
-  background-image: url("../img/main/NagualMaya.png");
-  background-size: 57%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  .botonGluGlu::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    left: 0;
+    bottom: -150%;
+    border-radius: 20%;
+    /* background-color: #151E3F; */
+    background-color: #130a24;    
+    z-index: -1;
+  }
+}
+@media screen and (min-width:1200px) {
+  .botonGluGlu::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    left: 0;
+    bottom: -150%;
+    border-radius: 15%;
+    /* background-color: #151E3F; */
+    background-color: #130a24;    
+    z-index: -1;
+  }
+}
+@media screen and (min-width:1400px) {
+
+  .botonGluGlu::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    left: 0;
+    bottom: -150%;
+    border-radius: 5%;
+    /* background-color: #151E3F; */
+    background-color: #130a24;    
+    z-index: -1;
   }
 }
