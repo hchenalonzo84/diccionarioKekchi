@@ -70,14 +70,15 @@ figure figcaption{
 @media screen and (min-width:480px) {
   main{
    margin-top: 40%;   
-   border:1px solid purple;
-   
+   /* border:1px solid purple; */
+   border: none;   
   }
 }
 @media screen and (min-width:600px) {
   main{
     margin-top: 40%;    
-    border:1px solid blue;
+    /* border:1px solid blue; */
+    border: none;
   }
   
 }
@@ -101,12 +102,14 @@ figure figcaption{
 @media screen and (min-width:920px) {
   main{    
     margin-top: 45%;
-    border:1px solid green;
+    /* border:1px solid green; */
+    border: none;
   }
 }
 @media screen and (min-width:1024px) {
   main{
-    border:1px solid red;
+    /* border:1px solid red; */
+    border: none;
     margin-top: 10%;    
   }
   figure img{
@@ -127,7 +130,8 @@ figure figcaption{
 }
 @media screen and (min-width:1444px) {
   main{
-    border:1px solid white;
+    /* border:1px solid white; */
+    border: none;
   }
 }
 @media screen and (min-width:1920px) {
@@ -146,7 +150,8 @@ figure figcaption{
 }
 @media screen and (min-width:2200px) {
   main{
-    border:1px solid lightskyblue;
+    /* border:1px solid lightskyblue; */
+    border: none;
   }
   
 }
