@@ -1,6 +1,6 @@
 export default function redireccion() {    
    
     setTimeout(() => {
-        location.href="./vistas/main.html";
+        location.href="/main";
     }, 2500);
 }
